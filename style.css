@@ -1,20 +1,3 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
 
   /**
@@ -339,8 +322,6 @@ main {
 .avatar-box {
   background: var(--bg-gradient-onyx);
   border-radius: 50%; 
-  width: 100px; 
-  height: 100px;
 }
 
 .info-content .name {
