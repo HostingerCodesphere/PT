@@ -157,3 +157,25 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
+
+    var fullname = document.getElementById('fullname').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+
+    // Format the message for WhatsApp
+    var whatsappMessage = "Name: " + fullname + "%0A" + "Email: " + email + "%0A" + "Message: " + message;
+
+    // Construct the WhatsApp link
+    var whatsappLink = "https://api.whatsapp.com/send?phone=6288210982908&text=" + whatsappMessage;
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappLink);
+
+    // Optional: Reset the form fields after submission
+    document.getElementById('fullname').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('message').value = "";
+});
